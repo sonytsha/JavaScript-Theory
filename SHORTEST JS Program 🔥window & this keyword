@@ -1,0 +1,26 @@
+whenever a JS program is run ( even if empty) a global execution context, global object and this variable - these things are created.
+
+global object in case of browsers is called - windows
+
+this === window is true
+
+if we try to put any variable into global space ( global space means any code inside JS which is not inside function is global space, in the below example only x is not global
+space), if we run window, a, b will be inside it but not x
+
+var a = 10;
+function b() {
+var x = 10;
+}
+
+when we try to access something and dont put window before it , it auto assumes that its inside the global space
+
+var a =10;
+function b() {
+var x = 10;
+}
+console.log(window.a);
+console.log(a);
+console.log(x); --- this will throw error saying x not defIned
+console.log(this.a); -- this will give 10 output
+
+this.a / windows.a all same
