@@ -69,3 +69,17 @@ whole exectuon context is deleted, line 7 work done
 now whole global exectuion context is deleted
 
 
+CALL STACK : 
+
+Wwhole execution context is pushed to call stack
+its only to mansge exectuon context
+whenever an execution contect is inserted , it will be pushed into the stack and whenever an execution context is deleted , it will be pushed out of the stack 
+
+Call Stack maintains the order of execution of execution contexts
+
+call stack also knownn as : 
+1) execution context stack
+2) program stack 
+3) control stack
+4) runtime stack
+5) machine stack
