@@ -1,0 +1,56 @@
+var x = 7;
+function getName() {
+console.log("Sony Shaw");
+}
+getName();
+console.log(x);
+
+--------------------
+getName();
+console.log(x);
+var x = 7;
+function getName() {
+console.log("Sony Shaw");
+}
+------------------------------
+works like a function 
+
+getName();
+console.log(x);
+console.log(getName);
+var x = 7;
+function getName() {
+console.log("Sony Shaw");
+}
+------------------------
+
+getName as arrow function : it will work like a variable 
+
+getName();
+console.log(x);
+console.log(getName);
+var x = 7;
+var getName() => {
+console.log("Sony Shaw");
+}
+-----------------------
+
+you can also create a function like this : it behaves like a variable
+
+getName();
+console.log(x);
+console.log(getName);
+var x = 7;
+var getName2 = function() {
+console.log("Sony Shaw");
+}
+-------------------------------
+
+var x = 7;
+function getName(0 {
+console.log("Sonytsha");
+}
+getName();
+console.log(x);
+console.log(getName);
+-----------------------------------
