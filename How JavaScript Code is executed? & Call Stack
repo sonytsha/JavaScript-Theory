@@ -1,0 +1,71 @@
+var n = 2;
+function square ( num ) {
+var abs = num * num 
+return ans;
+}
+var square2 = square(n);
+var square4 = square(4);
+
+
+
+Phase 1) memory creation phase : 
+ runs throw the whole code 
+allocates a  memory to n
+stores a special value "undefined" 
+
+n: undefined
+square : { ... } // store whole code here // its a function
+square2 : undefined
+square4 : undefined
+
+Phase 2) code execution : 
+
+runs throw the whole code 
+places 2 inside n ( n is called place holder/ identifier)
+
+2 to 5 nothing to execute
+comes to line 6
+function invokation happens
+when u see function inside() paranthesis
+function is invoked square(n) 
+a brand new execution context is created
+
+
+var square2 = square(n);
+now this execution contect also have 2 phases - 
+i) memory creation : we will allocate memory to num and ans
+
+num : undefined
+ans : undefined
+
+ii) code execution : n=2 is passed to num
+num is known as parameter of the function and n is argument
+
+num : 2 now
+next line
+line 3
+ans =  num * num = 4
+
+return says return the control back to the execution contect whrre the function was invoked
+function was invoked at line 6
+so return  to line 6
+
+square2 is 2 now
+
+all done in line 6, deleted in code
+
+now line 7 , same repeatead
+i) memory creation :
+num : undefined
+ans : undefined
+ii) code execution : 
+num = 4
+ans = 4 * 4  = 16
+return ans means return to line 7
+square4 : 16
+done
+whole exectuon context is deleted, line 7 work done
+
+now whole global exectuion context is deleted
+
+
