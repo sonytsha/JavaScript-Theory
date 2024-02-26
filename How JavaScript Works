@@ -1,0 +1,21 @@
+Everything in JS happens inside an "Execution Context"
+
+2 components : 
+
+1) memory : key : value 
+a : 10
+fn :{...}
+also known as "variable environment"
+all the variable , functions are stored as key value pair
+
+2) code component : 
+where code is executed one at a time
+also known as "thread of execution"
+
+JS is a synchronous single-threaded language
+
+1 command at a time and only go to next line once the current execution has been done
+
+
+
+
