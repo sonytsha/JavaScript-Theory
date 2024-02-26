@@ -1,0 +1,38 @@
+function a() {
+console.log(b);
+var b =10;
+a();
+
+
+
+function a() {
+function c() {
+console.log(b);
+}
+var b =10;
+a();
+
+lexical environment :
+whenever an execution conext is created , a lexical enviroment is also created
+lexical environment is the local memory + along with the lexical environment of its parent
+lexical means in hirerchy
+where the specific function is
+c is lexically under a  and a is lexically under global scope
+
+function a() {
+var b= 10;
+c();
+function c() {
+console.log(b); --- can be accessed
+}
+}
+a();
+console.log(b); ---- can not be accessed outside
+
+scope chain : whole level of lexical environment is known as scope chain
+if JS doesnt find anything in one local memory in goes to the next level, then next lebel and then next level
+thos chain is called scope chain
+
+
+
+
