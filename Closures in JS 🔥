@@ -1,0 +1,61 @@
+function x() {
+var a =7;
+function y() {
+console.log(a);
+}
+y();
+}
+x();
+
+a function bined together with its lexical environment - closure
+y was bined to the variable of lexical scope of x
+
+function x() {
+var a =7;
+function y() {
+console.log(a);
+}
+return y;
+}
+var z = x();
+console.log(z);
+
+function + lexical scope = closure
+
+
+both the codes are same , above and this :
+function x() {
+var a =7;
+rerturn function y() {
+console.log(a);
+}
+}
+var z = x();
+console.log(z);
+
+
+
+
+function z() {
+var b 900;
+function x() {
+var a =7;
+ function y() {
+console.log(a,b);
+}
+y();
+}
+x();
+}
+z();
+
+use of closure : 
+- module design pattern
+-currying
+- functions like once
+-memoize
+- maintaining state in async world
+- setTimeouts
+- Iterators
+- and many more ........
+
