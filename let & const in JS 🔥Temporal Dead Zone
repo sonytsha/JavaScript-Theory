@@ -1,0 +1,49 @@
+let & const declarations are hoisted
+
+console.log(b); --- undefined value
+console.log(a); =----- error
+let a = 10;
+var b = 100;
+console.log(a); ----- 10
+
+for let and const they are stored in a separate memeory space, not in global, u cant access them before putting any value
+
+temporaral dead zone - the time when its hoisted/assigned but not being initialized or not put any value
+whenver u try to access variable in temporal dead zone, u get error
+it cant be accessed in temporal dead zone
+
+window.b -- 10
+window.a -- undefined
+coz let and const dont store in window
+
+we cant duplicate with let
+let a =10;
+let a =100;
+it will show error
+redeclaration is not psble with let 
+
+let a =10;
+var a=100;
+it will show error
+once in let, u cant redeclare it
+
+in const :
+const b = 1000;
+
+
+u can do : let a;
+a=10;
+console.log(a);
+
+but u cant do this with const: 
+const b;
+b=10;
+this will throw error --- syntax error , 
+
+whenever const is there, u will need to declare in the same line
+
+const b =100;
+b=10; -----it will throw type  error
+
+
+
