@@ -1,0 +1,91 @@
+// Function statement aka Function declaration
+
+function a() {
+console.log("a called");
+}
+a();
+
+// Function Expression
+
+var b = function () {
+console.log("b called");
+}
+b();
+
+diff btwn Function statement vs Function Expression
+if you run a(); and b(); before this code execution a(0; will not throw error but b(); will 
+this is because of hoisting
+a(); assigned a memory location but b is treated asa variable undefined and it doesnt assign anything until it hits line console log
+
+
+
+// Anonymous function
+a funciton without a name 
+function() {
+}
+it will throw syntax error
+function statement requires a function name all the name
+
+anonymous functions are used, when they are used as values
+
+
+// Named Function Expression
+
+
+var b = function  xyz() {
+console.log("b called");
+}
+b();
+xyz(); --- error
+
+its same as function exprrssion but instead of using anonymous fucntion
+when e give it a name , its called named function exp
+
+xyz is not global , its created local 
+u can access it within {}
+
+var b = function  xyz() {
+console.log("b called");
+console.log(xyz);
+}
+b();
+
+no error
+
+
+// Difference between parameters and argumemts
+
+var b = function ( param1, param2) {
+console.log("b called");
+}
+a();
+b(1,2);
+
+values inside a function is called arguments like 1,2
+lables which gets those argumenrs are called paraments like param1, param2
+
+// First Class Function
+
+var b = function(param1) {
+console.log("b calleD");
+}
+b(function() {
+});
+
+var b = function(param1) {
+console.log(param1);
+}
+function xyz() {
+}
+b(xyz);
+
+the ability of functions to be used as values is known as first class functions.
+the ability of functions to be used as values and can be passed as an argument and- another function and can be returned from that function - this ability is known as first class functions
+
+Functions are used as First Class Citizens - ability to be used like values
+
+it will behave the same way with var, const, let all
+
+// Arrow Functions
+
+
