@@ -1,0 +1,89 @@
+function z() {
+vbar i=0;
+setTimeout(function() {
+console.log(i);
+}, 1000);
+console.log("sony");
+}
+x();
+
+setTimeout only sets timer fot this : it stores and sets timer for this code
+(function() {
+console.log(i);
+}, 1000);
+
+other codes or lined will not wait for it.
+
+
+print it after every second 5 times : 1000 milisecond
+
+function x() {
+for ( var i=1 ; i<=5;i++) {
+setTimeout(function() {
+console.log(i);
+}, i * 1000);
+}
+console.log("sony");
+}
+x();
+
+it will print : 
+sony
+6
+6
+6
+6
+6
+
+by the time callback functions gets a chance to print, i gets updated to 6
+
+
+
+function x() {
+for ( let i=1 ; i<=5;i++) {
+setTimeout(function() {
+console.log(i);
+}, i * 1000);
+}
+console.log("sony");
+}
+x();
+
+it will print : 
+sony
+1
+2
+3
+4
+5
+
+let , everytime loop runs it will have a new copy of it
+let is block scoped
+
+
+form a closure so that we can use var with the same code : 
+each and every time we want a new copy with var also
+
+
+function x() {
+for ( let i=1 ; i<=5;i++) {
+function close(x) {
+setTimeout(function() {
+console.log(x);
+}, x * 1000);
+}
+close(i);
+}
+console.log("sony");
+}
+x();
+it will print : 
+sony
+1
+2
+3
+4
+5
+
+
+
