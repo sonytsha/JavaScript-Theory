@@ -1,0 +1,39 @@
+JavaScript Runtime Environment
+
+it has : 
+JS Engine
+APIs
+call back queue
+micro task quwue
+
+JS engine : JS engine had many phases
+
+3 steps : 
+
+1) parsing : code is broken down in to token
+syntax parser : broke down code and convert into AST ( abstract syntax tree)
+
+AST passed into interpreter
+2) compilation : JIT ( just in time ) compilation. 
+most of JS has interpreter + compilor to run fast
+AST goes into interpreter which produces bytecode. which is being executed with the help of memory heap anf call stack
+and compilor is continuously working to optimize the code as much as possible
+We have a garbage collector which collects garbage and optize the memory space used to JS engine
+
+
+3) execution : memory heap and call stack. 
+
+mark and sweep algorithm
+
+in line in
+copy elision
+inline caching
+
+V8 google is fastest
+V8 has interpret named igmition
+V8 has optimizing compilor named turbofan
+
+JRE whenever u executes any JS piece of code, it needs a container which contains everyting that is required to run a JS code, that is JRE.
+it has a JS engine, heart of JRE.
+
+
