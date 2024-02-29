@@ -1,0 +1,74 @@
+a function which takes another function as an argument or returns another function from it is known as higher order function.
+
+function x () {
+console.log("sony");}
+func y(x) {
+x();
+}
+
+y is the higher order function and x is the call back function
+
+const radius = [3,1,2,4];
+const calculateArea = function(radius) {
+const output = [];
+for ( let i=0; i<radius.length;i++) {
+output.push(Math.PI * radius[i] * radius[i]);
+}
+return output;
+}
+console.log(calculateArea(radius));
+
+const calculateCircumference = function(radius) {
+const output = [];
+for ( let i=0; i<radius.length;i++) {
+output.push( 2* Math.PI *  radius[i]);
+}
+return output;
+}
+console.log(calculateCircumference(radius));
+
+const radius = [3,1,2,4];
+const calculateDiameter = function(radius) {
+const output = [];
+for ( let i=0; i<radius.length;i++) {
+output.push(2 * radius[i]);
+}
+return output;
+}
+console.log(calculateDiameter(radius));
+
+this is too long code and repeatative
+need to use functional programming
+DRY - DONT REPEAT YOURSELF --
+
+2nd way 
+
+const radius = [3,1,2,4];
+
+const area = fuction(radius) {
+return Math.PI * radius * radius ;
+};
+
+const diametger = function(radius) {
+return 2*radius;
+};
+
+const circumference = function(radius) {
+return 2* Math.PI * radius;
+};
+
+const calculate = function(radius, logic) {
+const output = [];
+for ( let i=0; i<radius.length;i++) {
+output.push( logic(radius[i]));
+}
+
+return output;
+};
+console.log(calculate(radius,area));
+console.log(calculate(radius,circumference));
+console.log(calculate(radius,diameter));
+
+console.log(radius.map(area)); // map function creates a new array , iterates over all the function of radius and returns the output
+
+
