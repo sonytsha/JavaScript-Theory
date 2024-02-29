@@ -1,0 +1,99 @@
+[].map() ------- map functiuon is used to transform an array, suppose double whole array or find the binary of each element
+
+const arr = [5,1,3,2,6];
+const output = arr.map(double);
+function double(x) {
+return x*2;
+}
+const output = arr.map(double);
+console.log(output);
+
+or 2nd way to write 
+const output1 = arr.map(function binary(x) {
+return x.toString(2);
+});
+console.log(output1);
+
+or you can write it as : 
+const output = arr.map(x) => x.toString(2));
+console.log(output);
+
+2) FILTER FUNCTION : 
+used to filter values inside the array , suppose all greater than 4, or divisable by 2
+
+const arr = [5,1,3,2,6];
+// find odd value
+function isOdd(x) {
+return x%2;
+}
+const output = arr.filter(isOdd);
+console.log(output);
+
+3) REDUCE :
+
+when u have to take all elements of an array and come up with a single value out of them
+ex : sum of all the elements, max no of all
+
+
+in non functional way : 
+const arr = [5,1,3,2,6];
+function finssum(arr) {
+let sum = 0;
+for( let i=0;i<arr.lenght;i++) {
+sum = sum + a[i];
+}
+return sum;
+}
+console.log(findsum(arr));
+
+functional way : using reduce
+const output = arr.reduece(function(acc,curr) {
+// acc = accumulator, curr = current, it takes 2 paraments
+// curr means values in arr and acc means the result we want
+acc = acc + curr;
+return acc;
+}, 0);
+// 0 is the  initial value of acc 
+
+
+const arr = [5,1,3,2,6];
+const output = arr.reduece(function(acc,curr) {
+if( curr > acc) {
+acc = curr; }
+return max;
+},0);
+console.log(output);
+
+
+
+const users = [
+{ firstName : "sony", lastName : "shaw", age : 22},
+{ firstName : "donald", lastName : "trump", age : 26},
+{ firstName : "elon", lastName : "musk", age : 46},
+{ firstName : "sonytsha", lastName : "shaw", age : 27},
+];
+const output = users.map((x) => x.firstName +" " +x.lastName);
+console.log(output);
+output : ['sony shaw', 'donald trump', 'elon musk', 'sonytsha shaw']
+
+const output1 = users.reduce(function(acc,curr) {
+if ( acc[curr.age]) {
+acc[curr.age] = ++acc[curr.age];
+}
+else {
+acc[curr.age] = 1
+}
+return acc;
+}, {});
+console.log(output1);
+22: 1, 26: 1, 27: 1, 46: 1}22: 126: 127: 146: 1[[Prototype]]: Object
+
+
+
+const output = 
+users.filter((x) => x.age <30)
+.map((x) => x.firstName);
+console.log(output);
+
+3) ['sony', 'donald', 'sonytsha']
+
