@@ -25,5 +25,6 @@ api.updateWallet()
 
 
 2) Inversion of Control : 
+that we loose control of our program while being into multiple functions
 
 
