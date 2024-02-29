@@ -1,0 +1,29 @@
+1) Callback hell  : 
+
+console.log("sony");
+setTimeout( function () {
+console.log("JS");
+},5000);
+console.log("shaw");
+
+
+call back hell is one function inside another inside another or another API
+, code starts to grow horizontally is called callback hell
+It is also known as pyramid of doom
+const cart = ["shoes", "pants", "kurta"];
+api.createOrder( cart, function() {
+function() {
+api.proceedToPayment(function() {
+api.showOrderSummary{
+function() {
+api.updateWallet() 
+}
+}
+})
+})
+
+
+
+2) Inversion of Control : 
+
+
