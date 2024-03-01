@@ -1,0 +1,45 @@
+const cart = ["shoes","pants", "kurta];
+
+createOrder(cart,function() {
+proceedToPayment(orderId);
+});
+const promise = createOrder(cart);
+
+// promise means an empty object which will hold whatever this  createOrder api will return to us
+// { data : OrderDetails }
+
+promise.then(function(orderId) {
+proceedToPayment(orderId);
+});
+
+// attaching this callback function to a promise object
+// when used promise , it will call the function guarantted and once only once
+
+
+const GITHUB_API ="https://api.github.com/users/sonytsha"
+const user = fetch(GITHUB_API);
+console.log(user);
+fetch will return a promise, aync operation takes time to fulfill, 
+it will be pending  state, after some time it will be fulfilled
+
+user.then(function(data) {
+console.log(data);
+}); 
+
+promises have 3 statets only : 
+1) pending
+2) fulfilled
+3) rejected
+
+promise object is a placeholder for a certin value until we receive  a value from a asynchronous operation
+promise is a container for a future value
+
+a promise is an object representing the eventual completion or failure of an async operation.
+
+
+PROMISE CHAINING : 
+createOrder(cart)
+.then((orderId) => proceedToPayment(orderId))
+.then((paymentInfo) => showOrderSummary(paymentInfo))
+.then((paymentInfo) => updateWalletBalance(paymentInfo));
+
